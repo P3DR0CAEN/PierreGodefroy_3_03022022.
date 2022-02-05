@@ -1,0 +1,177 @@
+h1 {
+    font-weight: 900;
+}
+
+header.index {
+    div {
+        padding: $space-small;
+        text-align: center;
+    }
+    .logo {
+        img {
+            max-width: 50%;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .location {
+        background-color: $color-grey;
+    }
+    .intro {
+        padding: $space-large $space-small;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $color-grey-light;
+        gap: $space;
+    }
+}
+
+#fonctionnement {
+    display: flex;
+    flex-direction: column;
+    padding: $space-large $space;
+    gap: $space;
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    h1 {
+        margin-bottom: $space-small;
+        @include tablet {
+            margin-bottom: 0;
+            width: 100%;
+        }
+        @include desktop {
+            width: auto;
+        }
+    }
+    .step {
+        position: relative;
+        flex: 1 1 0;
+        display: inline-flex;
+        align-items: center;
+        background-color: $color-grey-light;
+        padding: $space;
+        border-radius: 20px;
+        margin-left: $space-small;
+        font-weight: 900;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.01);
+        }
+        .number {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-primary;
+            color: $color-white;
+            height: $space;
+            width: $space;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        i {
+            color: $color-grey-dark-light;
+            width: $space-tall;
+            &.first::before {
+                font-family: 'FontAwesome';
+                font-style: normal;
+                content: "\f3cd";
+            }
+        }
+        &:hover {
+            background-color: $color-secondary-light;
+            cursor: pointer;
+            i {
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+#restaurants {
+    background-color: $color-grey-light;
+    padding: $space-large $space;
+    display: flex;
+    flex-direction: column;
+    gap: $space;
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    h1 {
+        @include tablet {
+            width: 100%;
+        }
+    }
+    .card {
+        position: relative;
+        flex: 1 1 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        background-color: $color-white;
+        border-radius: 20px;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.01);
+        }
+        @include tablet {
+            flex: 1 1 45%;
+        }
+        @include desktop {
+            flex: 1 1 20%;
+        }
+        .new {
+            position: absolute;
+            top: $space-small;
+            right: $space-small;
+            background-color: $color-tertiary;
+            color: $color-tertiary-dark;
+            padding: $space-tiny $space-small;
+            border-radius: 2px;
+            font-weight: 600;
+        }
+        .image {
+            width: 100%;
+            height: 165px;
+            object-fit: cover;
+            object-position: bottom;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            &:nth-child(2) {
+                object-position: 50% 61%;
+            }
+        }
+        .info {
+            flex: 1 1 0;
+            padding: $space-small;
+        }
+        .heart {
+            width: 24px;
+            padding-right: $space;
+            border-radius: 0;
+            &:hover,
+            &.product__star--active {
+                rect {
+                    transform: translateY(6%);
+                }
+            }
+            path {
+                stroke: black;
+                fill: black;
+                transition: fill .3s ease-in-out;
+            }
+            rect {
+                transform: translateY(100%);
+                transition: transform .3s ease-in-out;
+            }
+        }
+    }
+}

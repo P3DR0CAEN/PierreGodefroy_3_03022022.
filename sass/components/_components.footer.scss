@@ -1,0 +1,27 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: $space;
+    background-color: $color-grey-dark;
+    color: $color-white;
+    gap: 10px;
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .logo {
+        font-family: 'Shrikhand', cursive;
+        margin-bottom: $space-tiny;
+        font-size: $font-large;
+        @include tablet {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

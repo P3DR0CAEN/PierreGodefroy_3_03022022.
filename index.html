@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <header class="index">
+        <div class="logo">
+            <img src="images/logo/ohmyfood.png" alt="logo">
+        </div>
+        <div class="location">
+            <i class="fas fa-map-marker-alt"></i> Paris, Belleville
+        </div>
+        <div class="intro">
+            <h1>
+                Réservez le menu qui vous convient
+            </h1>
+            <p>
+                Découvrez des restaurants d'exception, séléctionnés par nos soins.
+            </p>
+            <a class="bouton" href="#restaurants">Explorer nos restaurants</a>
+        </div>
+    </header>
+    <section id="fonctionnement">
+        <h1>
+            Fonctionnement
+        </h1>
+        <div class="step">
+            <div class="number">1</div>
+            <i class="first"></i> Choisissez un restaurant
+        </div>
+        <div class="step">
+            <div class="number">2</div>
+            <i class="fas fa-list"></i> Composez votre menu
+        </div>
+        <div class="step">
+            <div class="number">3</div>
+            <i class="fas fa-store"></i> Dégustez au restaurant
+        </div>
+    </section>
+    <section id="restaurants">
+        <h1>
+            Restaurant
+        </h1>
+        <div class="card">
+            <div class="new">
+                Nouveau
+            </div>
+            <img class="image" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="img resto 1">
+            <div class="info">
+                <h3>
+                    La palette du goût
+                </h3>
+                Ménilmontant
+            </div>
+            <svg class="heart" viewBox="0 0 512 512">
+                <defs>
+                    <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0%" stop-color="#9356DC"/>
+                        <stop offset="100%" stop-color="#FF79DA"/>
+                    </linearGradient>
+                </defs>
+                <path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path>
+                <clippath id="star">
+                <path d="m458.4,64.3c-57.8,-48.6 -147.1,-41.3 -202.4,15c-55.3,-56.3 -144.6,-63.7 -202.4,-15c-75.2,63.3 -64.2,166.5 -10.6,221.2l175.4,178.7c10,10.2 23.4,15.9 37.6,15.9c14.3,0 27.6,-5.6 37.6,-15.8l175.4,-178.7c53.5,-54.7 64.7,-157.9 -10.6,-221.3z"/>
+                </clippath>
+                    <g clip-path="url(#star)">
+                <rect height="100%" width="100%" fill="url(#Gradient1)">
+                </rect></g>
+            </svg>
+        </div>
+        <div class="card">
+            <div class="new">
+                Nouveau
+            </div>
+            <img class="image" src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="img resto 1">
+            <div class="info">
+                <h3>
+                    La note enchantée
+                </h3>
+                Charonne
+            </div>
+            <svg class="heart" viewBox="0 0 512 512">
+                <defs>
+                    <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0%" stop-color="#9356DC"/>
+                        <stop offset="100%" stop-color="#FF79DA"/>
+                    </linearGradient>
+                </defs>
+                <path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path>
+                <clippath id="star">
+                <path d="m458.4,64.3c-57.8,-48.6 -147.1,-41.3 -202.4,15c-55.3,-56.3 -144.6,-63.7 -202.4,-15c-75.2,63.3 -64.2,166.5 -10.6,221.2l175.4,178.7c10,10.2 23.4,15.9 37.6,15.9c14.3,0 27.6,-5.6 37.6,-15.8l175.4,-178.7c53.5,-54.7 64.7,-157.9 -10.6,-221.3z"/>
+                </clippath>
+                    <g clip-path="url(#star)">
+                <rect height="100%" width="100%" fill="url(#Gradient1)">
+                </rect></g>
+            </svg>
+        </div>
+        <div class="card">
+            <img class="image" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="img resto 1">
+            <div class="info">
+                <h3>
+                    A la française
+                </h3>
+                Cité Rouge
+            </div>
+            <svg class="heart" viewBox="0 0 512 512">
+                <defs>
+                    <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0%" stop-color="#9356DC"/>
+                        <stop offset="100%" stop-color="#FF79DA"/>
+                    </linearGradient>
+                </defs>
+                <path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path>
+                <clippath id="star">
+                <path d="m458.4,64.3c-57.8,-48.6 -147.1,-41.3 -202.4,15c-55.3,-56.3 -144.6,-63.7 -202.4,-15c-75.2,63.3 -64.2,166.5 -10.6,221.2l175.4,178.7c10,10.2 23.4,15.9 37.6,15.9c14.3,0 27.6,-5.6 37.6,-15.8l175.4,-178.7c53.5,-54.7 64.7,-157.9 -10.6,-221.3z"/>
+                </clippath>
+                    <g clip-path="url(#star)">
+                <rect height="100%" width="100%" fill="url(#Gradient1)">
+                </rect></g>
+            </svg>
+        </div>
+        <div class="card">
+            <img class="image" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="img resto 1">
+            <div class="info">
+                <h3>
+                    Le délice des sens
+                </h3>
+                Folie-Méricourt
+            </div>
+            <svg class="heart" viewBox="0 0 512 512">
+                <defs>
+                    <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0%" stop-color="#9356DC"/>
+                        <stop offset="100%" stop-color="#FF79DA"/>
+                    </linearGradient>
+                </defs>
+                <path fill="currentColor" d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"></path>
+                <clippath id="star">
+                <path d="m458.4,64.3c-57.8,-48.6 -147.1,-41.3 -202.4,15c-55.3,-56.3 -144.6,-63.7 -202.4,-15c-75.2,63.3 -64.2,166.5 -10.6,221.2l175.4,178.7c10,10.2 23.4,15.9 37.6,15.9c14.3,0 27.6,-5.6 37.6,-15.8l175.4,-178.7c53.5,-54.7 64.7,-157.9 -10.6,-221.3z"/>
+                </clippath>
+                    <g clip-path="url(#star)">
+                <rect height="100%" width="100%" fill="url(#Gradient1)">
+                </rect></g>
+            </svg>
+        </div>
+    </section>
+    <footer>
+        <div class="logo">
+            ohmyfood
+        </div>
+        <a href="#">
+            <i class="fas fa-utensils"></i> Proposer un restaurant
+        </a>
+        <a href="#">
+            <i class="fas fa-hands-helping"></i> Devenir partenaire
+        </a>
+        <a href="#">
+            Mentions légales
+        </a>
+        <a href="#">
+            Contact
+        </a>
+    </footer>
+</body>
+
+</html>

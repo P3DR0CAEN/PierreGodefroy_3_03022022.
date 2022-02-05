@@ -1,0 +1,16 @@
+/* settings */
+
+@import "settings/settings.global";
+@import "settings/settings.sass-mq";
+@import "settings/settings.fonts";
+@import "settings/settings.colors";
+
+/* composants */
+
+@import "components/components.bouton";
+@import "components/components.footer";
+
+/* pages */
+
+@import "pages/pages.index";
+@import "pages/pages.restaurant";

@@ -1,0 +1,15 @@
+.bouton {
+    display: inline-block;
+    width: auto;
+    padding: $space-small $space;
+    border: none;
+    border-radius: $space;
+    background: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
+    text-decoration: none;
+    color: $color-white;
+    &:hover {
+        background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%);
+        cursor: pointer;
+        transform: scale(1.01);
+    }
+}

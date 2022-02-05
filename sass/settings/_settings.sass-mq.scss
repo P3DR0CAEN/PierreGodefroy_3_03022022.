@@ -1,0 +1,32 @@
+///* ========================================================================
+//   #SASS-MQ
+//   ======================================================================== */
+@mixin s-mobile {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: 350px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 740px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 980px) {
+        @content;
+    }
+}
+
+@mixin wide {
+    @media (min-width: 1300px) {
+        @content;
+    }
+}
