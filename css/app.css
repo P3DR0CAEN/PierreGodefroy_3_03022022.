@@ -30,6 +30,9 @@
   width: 24px;
   border-radius: 0;
 }
+.heart:hover, .heart.product__star--active {
+  cursor: pointer;
+}
 .heart:hover rect, .heart.product__star--active rect {
   transform: translateY(6%);
 }
@@ -189,6 +192,7 @@ header.index .intro {
 @media (min-width: 740px) {
   #restaurants h1 {
     width: 100%;
+    flex: none;
   }
 }
 #restaurants .card {
@@ -243,6 +247,10 @@ header.index .intro {
   padding-right: 24px;
 }
 
+body.restaurant {
+  background-color: #353535;
+}
+
 h1 {
   font-family: "Shrikhand", cursive;
   font-weight: inherit;
@@ -250,6 +258,7 @@ h1 {
 }
 
 header.restaurant .logo {
+  background-color: white;
   position: relative;
   padding: 12px;
   text-align: center;
@@ -270,6 +279,13 @@ header.restaurant .logo img:hover {
 header.restaurant .background {
   width: 100%;
 }
+@media (min-width: 740px) {
+  header.restaurant .background {
+    height: 400px;
+    object-fit: cover;
+    object-position: center 60%;
+  }
+}
 
 .main {
   position: relative;
@@ -283,14 +299,26 @@ header.restaurant .background {
   flex-direction: column;
   gap: 24px;
 }
+@media (min-width: 1300px) {
+  .main {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 .main .restaurant_name {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 .main section {
   display: flex;
   gap: 12px;
   flex-direction: column;
+}
+@media (min-width: 1300px) {
+  .main section {
+    flex: 1 1 30%;
+  }
 }
 .main section .title {
   text-transform: uppercase;
@@ -309,6 +337,10 @@ header.restaurant .background {
   justify-content: space-between;
   align-items: flex-end;
   box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1);
+}
+.main section .card:hover {
+  transform: scale(1.01);
+  cursor: pointer;
 }
 .main section .card .prix {
   font-weight: 600;

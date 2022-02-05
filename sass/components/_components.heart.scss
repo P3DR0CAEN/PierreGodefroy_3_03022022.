@@ -3,6 +3,7 @@
     border-radius: 0;
     &:hover,
     &.product__star--active {
+        cursor: pointer;
         rect {
             transform: translateY(6%);
         }

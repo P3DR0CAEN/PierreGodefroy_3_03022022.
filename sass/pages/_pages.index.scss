@@ -108,6 +108,7 @@ header.index {
     h1 {
         @include tablet {
             width: 100%;
+            flex: none;
         }
     }
     .card {
