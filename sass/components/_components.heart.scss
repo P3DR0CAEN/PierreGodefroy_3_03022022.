@@ -1,0 +1,19 @@
+.heart {
+    width: 24px;
+    border-radius: 0;
+    &:hover,
+    &.product__star--active {
+        rect {
+            transform: translateY(6%);
+        }
+    }
+    path {
+        stroke: black;
+        fill: black;
+        transition: fill .3s ease-in-out;
+    }
+    rect {
+        transform: translateY(100%);
+        transition: transform .3s ease-in-out;
+    }
+}
