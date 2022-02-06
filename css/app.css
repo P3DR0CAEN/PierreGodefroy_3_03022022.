@@ -10,6 +10,57 @@
 }
 
 /* composants */
+.loader {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: black;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: opacity_loader 3s ease-in;
+  opacity: 0;
+  visibility: hidden;
+}
+.loader .logo {
+  width: 50%;
+  border-radius: 0;
+}
+.loader .logo path {
+  stroke: white;
+  fill: white;
+}
+.loader .logo rect {
+  animation-duration: 2.5s;
+  animation-name: color_logo;
+}
+@keyframes color_logo {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes opacity_loader {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  84% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 .bouton {
   display: inline-block;
   width: auto;
@@ -30,10 +81,10 @@
   width: 24px;
   border-radius: 0;
 }
-.heart:hover, .heart.product__star--active {
+.heart:hover, .heart.heart--active {
   cursor: pointer;
 }
-.heart:hover rect, .heart.product__star--active rect {
+.heart:hover rect, .heart.heart--active rect {
   transform: translateY(6%);
 }
 .heart path {
@@ -44,6 +95,58 @@
 .heart rect {
   transform: translateY(100%);
   transition: transform 0.3s ease-in-out;
+}
+
+header.index div {
+  padding: 12px;
+  text-align: center;
+}
+header.index .logo img {
+  max-width: 50%;
+}
+header.index .logo img:hover {
+  cursor: pointer;
+}
+header.index .location {
+  background-color: #eaeaea;
+}
+header.index .intro {
+  padding: 48px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f6f6;
+  gap: 24px;
+}
+
+header.restaurant .logo {
+  background-color: white;
+  position: relative;
+  padding: 12px;
+  text-align: center;
+}
+header.restaurant .logo .back {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+}
+header.restaurant .logo img {
+  max-width: 50%;
+}
+header.restaurant .logo img:hover {
+  cursor: pointer;
+}
+header.restaurant .background {
+  width: 100%;
+}
+@media (min-width: 740px) {
+  header.restaurant .background {
+    height: 400px;
+    object-fit: cover;
+    object-position: center 60%;
+  }
 }
 
 footer {
@@ -79,28 +182,6 @@ footer .logo {
 /* pages */
 h1 {
   font-weight: 900;
-}
-
-header.index div {
-  padding: 12px;
-  text-align: center;
-}
-header.index .logo img {
-  max-width: 50%;
-}
-header.index .logo img:hover {
-  cursor: pointer;
-}
-header.index .location {
-  background-color: #eaeaea;
-}
-header.index .intro {
-  padding: 48px 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f6f6f6;
-  gap: 24px;
 }
 
 #fonctionnement {
@@ -251,47 +332,17 @@ body.restaurant {
   background-color: #353535;
 }
 
-h1 {
+h1.restaurant {
   font-family: "Shrikhand", cursive;
   font-weight: inherit;
   flex: 1 1 0;
-}
-
-header.restaurant .logo {
-  background-color: white;
-  position: relative;
-  padding: 12px;
-  text-align: center;
-}
-header.restaurant .logo .back {
-  position: absolute;
-  left: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.25rem;
-}
-header.restaurant .logo img {
-  max-width: 50%;
-}
-header.restaurant .logo img:hover {
-  cursor: pointer;
-}
-header.restaurant .background {
-  width: 100%;
-}
-@media (min-width: 740px) {
-  header.restaurant .background {
-    height: 400px;
-    object-fit: cover;
-    object-position: center 60%;
-  }
 }
 
 .main {
   position: relative;
   z-index: 1;
   background-color: #f6f6f6;
-  padding: 24px;
+  padding: 32px 12px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   margin-top: -50px;
@@ -309,6 +360,10 @@ header.restaurant .background {
   display: flex;
   flex-direction: row;
   width: 100%;
+  font-size: 1.25rem;
+}
+.main .restaurant_name .heart {
+  margin-right: 12px;
 }
 .main section {
   display: flex;
@@ -331,19 +386,80 @@ header.restaurant .background {
 .main section .card {
   background-color: #ffffff;
   border-radius: 15px;
-  padding: 12px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: stretch;
   box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  opacity: 0;
+  animation: show_card 1s ease-in-out 0s forwards;
 }
 .main section .card:hover {
   transform: scale(1.01);
   cursor: pointer;
 }
+.main section .card:hover .validate {
+  width: 60px;
+}
+.main section .card:hover .validate i {
+  animation: Rotate_I 0.7s ease 0s 1 normal forwards;
+}
+.main section .card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.main section .card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+@keyframes show_card {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.main section .card .info {
+  padding: 12px;
+  flex: 1 1 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main section .card .info h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .main section .card .prix {
   font-weight: 600;
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+}
+.main section .card .validate {
+  background-color: #99E2D0;
+  font-size: 1.25rem;
+  color: #ffffff;
+  overflow: hidden;
+  width: 0px;
+  transition: width 0.5s linear;
+}
+.main section .card .validate i {
+  display: flex;
+  width: 60px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes Rotate_I {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

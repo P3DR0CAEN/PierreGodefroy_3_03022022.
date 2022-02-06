@@ -2,7 +2,7 @@
     width: 24px;
     border-radius: 0;
     &:hover,
-    &.product__star--active {
+    &.heart--active {
         cursor: pointer;
         rect {
             transform: translateY(6%);

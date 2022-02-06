@@ -1,0 +1,55 @@
+header.index {
+    div {
+        padding: $space-small;
+        text-align: center;
+    }
+    .logo {
+        img {
+            max-width: 50%;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .location {
+        background-color: $color-grey;
+    }
+    .intro {
+        padding: $space-large $space-small;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $color-grey-light;
+        gap: $space;
+    }
+}
+
+header.restaurant {
+    .logo {
+        background-color: white;
+        position: relative;
+        padding: $space-small;
+        text-align: center;
+        .back {
+            position: absolute;
+            left: $space;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: $font-Large;
+        }
+        img {
+            max-width: 50%;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .background {
+        width: 100%;
+        @include tablet {
+            height: 400px;
+            object-fit: cover;
+            object-position: center 60%;
+        }
+    }
+}

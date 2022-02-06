@@ -2,47 +2,17 @@ body.restaurant {
     background-color: $color-grey-dark;
 }
 
-h1 {
+h1.restaurant {
     font-family: 'Shrikhand', cursive;
     font-weight: inherit;
     flex: 1 1 0;
-}
-
-header.restaurant {
-    .logo {
-        background-color: white;
-        position: relative;
-        padding: $space-small;
-        text-align: center;
-        .back {
-            position: absolute;
-            left: $space;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: $font-Large;
-        }
-        img {
-            max-width: 50%;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
-    .background {
-        width: 100%;
-        @include tablet {
-            height: 400px;
-            object-fit: cover;
-            object-position: center 60%;
-        }
-    }
 }
 
 .main {
     position: relative;
     z-index: 1;
     background-color: $color-grey-light;
-    padding: $space;
+    padding: 32px $space-small;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     margin-top: -50px;
@@ -57,6 +27,10 @@ header.restaurant {
         display: flex;
         flex-direction: row;
         width: 100%;
+        font-size: $font-Large;
+        .heart {
+            margin-right: $space-small;
+        }
     }
     section {
         display: flex;
@@ -76,18 +50,79 @@ header.restaurant {
         .card {
             background-color: $color-white;
             border-radius: 15px;
-            padding: $space-small;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            align-items: flex-end;
+            align-items: stretch;
             box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
             &:hover {
                 transform: scale(1.01);
                 cursor: pointer;
+                .validate {
+                    width: 60px;
+                    i {
+                        animation: Rotate_I 0.7s ease 0s 1 normal forwards;
+                    }
+                }
+            }
+            opacity: 0;
+            animation: show_card 1s ease-in-out 0s forwards;
+            &:nth-child(3) {
+                animation-delay: 0.2s;
+            }
+            &:nth-child(4) {
+                animation-delay: 0.4s;
+            }
+            @keyframes show_card {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: none;
+                }
+            }
+            .info {
+                padding: $space-small;
+                flex: 1 1 0;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                h3 {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
             .prix {
                 font-weight: 600;
+                display: flex;
+                align-items: flex-end;
+                padding: $space-small;
+            }
+            .validate {
+                background-color: $color-tertiary;
+                font-size: $font-Large;
+                color: $color-white;
+                overflow: hidden;
+                width: 0px;
+                transition: width 0.5s linear;
+                i {
+                    display: flex;
+                    width: 60px;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+                }
+                @keyframes Rotate_I {
+                    0% {
+                        transform: rotate(0);
+                    }
+                    100% {
+                        transform: rotate(720deg);
+                    }
+                }
             }
         }
     }

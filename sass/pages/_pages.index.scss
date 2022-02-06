@@ -2,32 +2,6 @@ h1 {
     font-weight: 900;
 }
 
-header.index {
-    div {
-        padding: $space-small;
-        text-align: center;
-    }
-    .logo {
-        img {
-            max-width: 50%;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
-    .location {
-        background-color: $color-grey;
-    }
-    .intro {
-        padding: $space-large $space-small;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: $color-grey-light;
-        gap: $space;
-    }
-}
-
 #fonctionnement {
     display: flex;
     flex-direction: column;
