@@ -12,7 +12,7 @@ h1.restaurant {
     position: relative;
     z-index: 1;
     background-color: $color-grey-light;
-    padding: 32px $space-small;
+    padding: 32px $space;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     margin-top: -50px;
@@ -23,7 +23,7 @@ h1.restaurant {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .restaurant_name {
+    .main__restaurant-name {
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -39,7 +39,7 @@ h1.restaurant {
         @include wide {
             flex: 1 1 30%;
         }
-        .title {
+        .section__title {
             text-transform: uppercase;
             hr {
                 margin-top: 4px;
@@ -59,10 +59,10 @@ h1.restaurant {
             &:hover {
                 transform: scale(1.01);
                 cursor: pointer;
-                .validate {
+                .card__validate {
                     width: 60px;
                     i {
-                        animation: Rotate_I 0.7s ease 0s 1 normal forwards;
+                        animation: Rotate_I .4s ease 0s 1 normal forwards;
                     }
                 }
             }
@@ -84,7 +84,7 @@ h1.restaurant {
                     transform: none;
                 }
             }
-            .info {
+            .card__info {
                 padding: $space-small;
                 flex: 1 1 0;
                 white-space: nowrap;
@@ -95,19 +95,19 @@ h1.restaurant {
                     text-overflow: ellipsis;
                 }
             }
-            .prix {
+            .card__prix {
                 font-weight: 600;
                 display: flex;
                 align-items: flex-end;
                 padding: $space-small;
             }
-            .validate {
+            .card__validate {
                 background-color: $color-tertiary;
                 font-size: $font-Large;
                 color: $color-white;
                 overflow: hidden;
                 width: 0px;
-                transition: width 0.5s linear;
+                transition: width .3s linear;
                 i {
                     display: flex;
                     width: 60px;
@@ -120,7 +120,7 @@ h1.restaurant {
                         transform: rotate(0);
                     }
                     100% {
-                        transform: rotate(720deg);
+                        transform: rotate(360deg);
                     }
                 }
             }

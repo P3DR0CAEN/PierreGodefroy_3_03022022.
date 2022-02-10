@@ -32,11 +32,13 @@ h1 {
         border-radius: 20px;
         margin-left: $space-small;
         font-weight: 900;
+        box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.1);
+        transition: transform .3s ease-in-out;
         &:hover {
             cursor: pointer;
             transform: scale(1.01);
         }
-        .number {
+        .step__number {
             position: absolute;
             left: 0;
             top: 50%;
@@ -53,10 +55,14 @@ h1 {
         i {
             color: $color-grey-dark-light;
             width: $space-tall;
-            &.first::before {
+            transition: color .3s ease-in-out;
+            &.step__icon::before {
                 font-family: 'FontAwesome';
                 font-style: normal;
                 content: "\f3cd";
+                @include desktop {
+                    content: "\f390";
+                }
             }
         }
         &:hover {
@@ -93,6 +99,8 @@ h1 {
         align-items: center;
         background-color: $color-white;
         border-radius: 20px;
+        box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.1);
+        transition: transform .3s ease-in-out;
         &:hover {
             cursor: pointer;
             transform: scale(1.01);
@@ -103,7 +111,7 @@ h1 {
         @include desktop {
             flex: 1 1 20%;
         }
-        .new {
+        .card__new {
             position: absolute;
             top: $space-small;
             right: $space-small;
@@ -112,8 +120,9 @@ h1 {
             padding: $space-tiny $space-small;
             border-radius: 2px;
             font-weight: 600;
+            box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.1);
         }
-        .image {
+        .card__image {
             width: 100%;
             height: 165px;
             object-fit: cover;
@@ -124,11 +133,11 @@ h1 {
                 object-position: 50% 61%;
             }
         }
-        .info {
+        .card__info {
             flex: 1 1 0;
             padding: $space-small;
         }
-        .heart {
+        .card__heart {
             padding-right: $space;
         }
     }

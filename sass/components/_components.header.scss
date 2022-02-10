@@ -3,7 +3,7 @@ header.index {
         padding: $space-small;
         text-align: center;
     }
-    .logo {
+    .header__logo {
         img {
             max-width: 50%;
             &:hover {
@@ -11,10 +11,11 @@ header.index {
             }
         }
     }
-    .location {
+    .header__location {
         background-color: $color-grey;
+        box-shadow: inset 0px 10px 10px -8px rgba(0, 0, 0, 0.5);
     }
-    .intro {
+    .header__intro {
         padding: $space-large $space-small;
         display: flex;
         flex-direction: column;
@@ -25,12 +26,12 @@ header.index {
 }
 
 header.restaurant {
-    .logo {
+    .header__logo {
         background-color: white;
         position: relative;
         padding: $space-small;
         text-align: center;
-        .back {
+        .header__back {
             position: absolute;
             left: $space;
             top: 50%;
@@ -44,7 +45,7 @@ header.restaurant {
             }
         }
     }
-    .background {
+    .header__background {
         width: 100%;
         @include tablet {
             height: 400px;
