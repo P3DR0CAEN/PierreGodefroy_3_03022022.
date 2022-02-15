@@ -221,11 +221,12 @@ h1 {
   #fonctionnement {
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
   }
 }
 #fonctionnement h1 {
   margin-bottom: 12px;
+  align-self: center;
 }
 @media (min-width: 740px) {
   #fonctionnement h1 {
@@ -315,8 +316,7 @@ h1 {
   position: relative;
   flex: 1 1 0;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0px 0px 13px 3px rgba(0, 0, 0, 0.1);
@@ -358,12 +358,38 @@ h1 {
 #restaurants .card .card__image:nth-child(2) {
   object-position: 50% 61%;
 }
-#restaurants .card .card__info {
+#restaurants .card .card__wrapper {
   flex: 1 1 0;
   padding: 12px;
+  display: flex;
+  justify-content: space-between;
 }
-#restaurants .card .card__heart {
-  padding-right: 24px;
+#restaurants .card .card__wrapper__infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#restaurants .card .card__wrapper__heart {
+  width: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 12px;
+}
+#restaurants .card .card__wrapper__heart i {
+  position: absolute;
+  font-size: 24px;
+}
+#restaurants .card .card__wrapper__heart i.fa-solid {
+  opacity: 0;
+  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.3s ease-in-out;
+}
+#restaurants .card .card__wrapper__heart i.fa-solid:hover {
+  opacity: 1;
 }
 
 body.restaurant {
@@ -401,7 +427,26 @@ h1.restaurant {
   font-size: 1.25rem;
 }
 .main .main__restaurant-name .heart {
-  margin-right: 12px;
+  width: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 12px;
+}
+.main .main__restaurant-name .heart i {
+  position: absolute;
+  font-size: 24px;
+}
+.main .main__restaurant-name .heart i.fa-solid {
+  opacity: 0;
+  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.3s ease-in-out;
+}
+.main .main__restaurant-name .heart i.fa-solid:hover {
+  opacity: 1;
 }
 .main section {
   display: flex;

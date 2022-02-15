@@ -29,7 +29,26 @@ h1.restaurant {
         width: 100%;
         font-size: $font-Large;
         .heart {
-            margin-right: $space-small;
+            width: 24px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin: 0 $space-small;
+            i {
+                position: absolute;
+                font-size: 24px;
+                &.fa-solid {
+                    opacity: 0;
+                    background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    transition: opacity .3s ease-in-out;
+                }
+                &.fa-solid:hover {
+                    opacity: 1;
+                }
+            }
         }
     }
     section {
