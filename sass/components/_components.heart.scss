@@ -1,21 +1,22 @@
-.heart,
-.card__heart {
+.heart {
     width: 24px;
-    border-radius: 0;
-    &:hover,
-    &.heart--active {
-        cursor: pointer;
-        rect {
-            transform: translateY(6%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 $space-small;
+    i {
+        position: absolute;
+        font-size: 24px;
+        &.fa-solid {
+            opacity: 0;
+            background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: opacity .3s ease-in-out;
         }
-    }
-    path {
-        stroke: black;
-        fill: black;
-        transition: fill .3s ease-in-out;
-    }
-    rect {
-        transform: translateY(100%);
-        transition: transform .3s ease-in-out;
+        &.fa-solid:hover {
+            opacity: 1;
+        }
     }
 }

@@ -96,31 +96,27 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.heart,
-.card__heart {
+.heart {
   width: 24px;
-  border-radius: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 12px;
 }
-.heart:hover, .heart.heart--active,
-.card__heart:hover,
-.card__heart.heart--active {
-  cursor: pointer;
+.heart i {
+  position: absolute;
+  font-size: 24px;
 }
-.heart:hover rect, .heart.heart--active rect,
-.card__heart:hover rect,
-.card__heart.heart--active rect {
-  transform: translateY(6%);
+.heart i.fa-solid {
+  opacity: 0;
+  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.3s ease-in-out;
 }
-.heart path,
-.card__heart path {
-  stroke: black;
-  fill: black;
-  transition: fill 0.3s ease-in-out;
-}
-.heart rect,
-.card__heart rect {
-  transform: translateY(100%);
-  transition: transform 0.3s ease-in-out;
+.heart i.fa-solid:hover {
+  opacity: 1;
 }
 
 header.index div {
@@ -224,18 +220,19 @@ h1 {
     align-items: stretch;
   }
 }
-#fonctionnement h1 {
+#fonctionnement h2 {
   margin-bottom: 12px;
   align-self: center;
+  font-weight: 800;
 }
 @media (min-width: 740px) {
-  #fonctionnement h1 {
+  #fonctionnement h2 {
     margin-bottom: 0;
     width: 100%;
   }
 }
 @media (min-width: 980px) {
-  #fonctionnement h1 {
+  #fonctionnement h2 {
     width: auto;
   }
 }
@@ -306,8 +303,11 @@ h1 {
     flex-wrap: wrap;
   }
 }
+#restaurants h2 {
+  font-weight: 800;
+}
 @media (min-width: 740px) {
-  #restaurants h1 {
+  #restaurants h2 {
     width: 100%;
     flex: none;
   }
@@ -369,28 +369,6 @@ h1 {
   flex-direction: column;
   justify-content: center;
 }
-#restaurants .card .card__wrapper__heart {
-  width: 24px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin: 0 12px;
-}
-#restaurants .card .card__wrapper__heart i {
-  position: absolute;
-  font-size: 24px;
-}
-#restaurants .card .card__wrapper__heart i.fa-solid {
-  opacity: 0;
-  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: opacity 0.3s ease-in-out;
-}
-#restaurants .card .card__wrapper__heart i.fa-solid:hover {
-  opacity: 1;
-}
 
 body.restaurant {
   background-color: #353535;
@@ -425,28 +403,6 @@ h1.restaurant {
   flex-direction: row;
   width: 100%;
   font-size: 1.25rem;
-}
-.main .main__restaurant-name .heart {
-  width: 24px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin: 0 12px;
-}
-.main .main__restaurant-name .heart i {
-  position: absolute;
-  font-size: 24px;
-}
-.main .main__restaurant-name .heart i.fa-solid {
-  opacity: 0;
-  background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: opacity 0.3s ease-in-out;
-}
-.main .main__restaurant-name .heart i.fa-solid:hover {
-  opacity: 1;
 }
 .main .main__restaurant__order-btn {
   width: 100%;
